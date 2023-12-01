@@ -1,4 +1,3 @@
-
 @use "variables" as v;
 
 @mixin for-size($size) {
@@ -13,7 +12,6 @@
     }
   }
 }
-
 
 @font-face {
   font-family: "super-funky";
@@ -71,19 +69,18 @@
       padding: 20px;
       height: 75px;
 
-      @include for-size(desktop){
+      @include for-size(desktop) {
         @include flex(row, space-around, center, 100%);
         gap: 2rem;
-       
       }
 
       #headerTxt {
         @include font("nugo-sans", 16px);
 
-        @include for-size(tablet){
+        @include for-size(tablet) {
           font-size: 18px;
         }
-        @include for-size(desktop){
+        @include for-size(desktop) {
           font-size: 20px;
         }
       }
@@ -93,15 +90,14 @@
           @include font("nugo-sans", 12px);
           display: none;
 
-          @include for-size(tablet){
+          @include for-size(tablet) {
             font-size: 18px;
           }
 
-          @include for-size(desktop){
+          @include for-size(desktop) {
             @include flex(row, center, center, 100%);
             gap: 2rem;
-             font-size: 20px;
-
+            font-size: 20px;
           }
 
           &.active {
@@ -114,7 +110,7 @@
             opacity: 90%;
             transition: 0.3s;
 
-            .nav-item{
+            .nav-item {
               margin: 20px;
             }
           }
@@ -137,15 +133,15 @@
         }
       }
       #socialHam {
-        @include flex(row,center,center,30%);
+        @include flex(row, center, center, 30%);
         gap: 1rem;
 
-        @include for-size(tablet){
-          width: 25%
+        @include for-size(tablet) {
+          width: 25%;
         }
 
-        @include for-size(desktop){
-          width: 15%
+        @include for-size(desktop) {
+          width: 15%;
         }
         #socialIcons {
           @include flex(row, center, center, 1);
@@ -185,7 +181,7 @@
         #hamburger {
           cursor: pointer;
 
-          @include for-size(desktop){
+          @include for-size(desktop) {
             display: none;
           }
 
@@ -211,6 +207,12 @@
             }
           }
         }
+      }
+    }
+    
+    main {
+      #home {
+        @include flex(column, center, center, 100%);
       }
     }
   }
